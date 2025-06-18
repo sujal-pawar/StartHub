@@ -29,8 +29,8 @@ export default async function Home({ searchParams }: {
         <SearchForm query={query} />
       </section>
 
-      <section className="selection_container dark:bg-black ">
-        <p className=" font-semibold text-center text-2xl dark:text-blue-300">
+      <section className="selection_container dark:bg-black">
+        <p className="text-center text-3xl font-semibold dark:text-blue-300">
           {query ? `Search results for "${query}"` : "Explore Startups"}
         </p>
         <ul className="mt-7 card_grid">

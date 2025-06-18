@@ -30,7 +30,8 @@ const StartUpCard = ({ post }: { post: StartUpTypeCard }) => {
             <div className="flex flex-col gap-3">            
                 <p className='text-gray-500 text-14-medium'>
                     {formatDate(post._createdAt)}
-                </p>                <div className='flex gap-1.5'>
+                </p>                
+                <div className='flex gap-1.5'>
                     <EyeIcon className='size-6 text-blue-600'/>
                     <span className='text-16-medium'>{post.views}</span>
                 </div>
@@ -47,8 +48,13 @@ const StartUpCard = ({ post }: { post: StartUpTypeCard }) => {
                     <div className='startup_card_badge'>
                         {post.category}
                     </div>
-                )}
-                
+                )}                
+            </div>
+            
+            <div className='flex-between mt-5 gap-5'>
+                <div className='flex-1'>
+                    <Link href={"/"}></Link>
+                </div>
             </div>
         </li>
     )

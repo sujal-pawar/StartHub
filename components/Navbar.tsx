@@ -6,21 +6,23 @@ import Image from "next/image";
 import { BadgePlus, LogOut } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import logo from '@/app/assets/logo.png';
+import { ThemeToggle } from "./ThemeToggle";
 
 const Navbar = () => {
   const { data: session } = useSession();
 
   return (
-    <header className="sticky top-0 z-50 px-5 py-3 bg-white dark:bg-zinc-900 shadow-md backdrop-blur-sm bg-opacity-80 dark:bg-opacity-80">
+    <header className="sticky top-0 z-50 px-5 py-3 dark:bg-black bg-white shadow-md ">
       <nav className="max-w-7xl mx-auto flex justify-between items-center">
         <Link href="/" className="transition-transform hover:scale-105">
           <div className="flex items-center justify-center font-semibold gap-2">
-            <Image src={logo} alt="logo" width={50} height={50} className="object-contain" />
-            <h1 className="text-2xl font-serif text-zinc-900 dark:text-white font-bold tracking-tight">StartHub</h1>
+       </nav>     <Image src={logo} alt="logo" width={50} height={50} className="object-contain" />
+            <h1 className="text-2xl font-serif text-zinc-900 dark:text-white </div>font-bold tracking-tight">StartHub</h1>
           </div>
-        </Link>
-
+        </Link>        
         <div className="flex items-center gap-5">
+          <ThemeToggle />
+          
           {session && session?.user ? (
             <>
               <Link 
