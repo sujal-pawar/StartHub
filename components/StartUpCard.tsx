@@ -3,18 +3,6 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
-// Define the StartUpTypeCard interface
-interface StartUpTypeCard {
-  _id: string;
-  title: string;
-  description?: string;
-  logo?: string;
-  _createdAt: string;
-  views: number;
-  slug: string;
-  category?: string;
-}
-
 // Helper function to format date
 const formatDate = (dateString: string): string => {
   return new Date(dateString).toLocaleDateString('en-US', {
@@ -25,35 +13,29 @@ const formatDate = (dateString: string): string => {
 }
 
 const StartUpCard = ({ post }: { post: StartUpTypeCard }) => {
+
+    const {_createdAt,views,author:{id:authorId,name},title,category,_id,image} = post;
+
     return (
         <li className="startup-card group">
-            <div className="flex flex-col gap-3">            
-                <p className='text-gray-500 text-14-medium'>
-                    {formatDate(post._createdAt)}
+            <div className="flex-between">            
+                <p className='text-16-medium text-gray-500 dark:text-gray-400'>
+                    {formatDate(_createdAt)}
                 </p>                
                 <div className='flex gap-1.5'>
                     <EyeIcon className='size-6 text-blue-600'/>
-                    <span className='text-16-medium'>{post.views}</span>
+                    <span className='text-16-medium'>{views}</span>
                 </div>
-                
-                <Link href={`/startup/${post.slug}`}>
-                    <h3 className='text-26-semibold line-clamp-1'>{post.title}</h3>
-                </Link>
-                
-                <p className='line-clamp-2 text-16-medium text-black-300'>
-                    {post.description || 'No description provided'}
-                </p>
-                
-                {post.category && (
-                    <div className='startup_card_badge'>
-                        {post.category}
-                    </div>
-                )}                
             </div>
-            
+
             <div className='flex-between mt-5 gap-5'>
                 <div className='flex-1'>
-                    <Link href={"/"}></Link>
+                    <Link href={`/user/${authorId}`}>
+                        <p className='text-16-medium line-clamp-1'>{name}</p>
+                    </Link>
+                    <Link href={`/startup/${_id}`} className='text-20-semibold mt-1 line-clamp-2 hover:underline'>
+                    <h3 className='text-26-semibold line-clamp-1'>{title}</h3>
+                    </Link>
                 </div>
             </div>
         </li>

@@ -105,7 +105,7 @@
     }
 
     .startup_card_date {
-        @apply text-black-300 text-14-normal;
+        @apply text-black text-14-normal;
     }
 
     .startup_card_badge {

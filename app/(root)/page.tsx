@@ -10,11 +10,10 @@ export default async function Home({ searchParams }: {
   const posts = [{
     _createdAt: new Date().toISOString(), // Convert Date to string
     views: 55,
-    author: { _id: "1" },
+    author: { _id: "1",name:"Sujal" },
     _id: "1",
-    slug: "we-robots",
     description: 'This is description of the startup. It is a great startup that aims to solve many problems in the world.',
-    logo: '/file.svg', // Using a file from your public folder
+    image:'https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHN0YXJ0dXB8ZW58MHx8MHx8fDA%3D',
     category: 'Robots',
     title: "We Robots",
   },]
@@ -30,7 +29,7 @@ export default async function Home({ searchParams }: {
       </section>
 
       <section className="selection_container dark:bg-black">
-        <p className="text-center text-3xl font-semibold dark:text-blue-300">
+        <p className="text-center text-3xl font-semibold dark:text-white">
           {query ? `Search results for "${query}"` : "Explore Startups"}
         </p>
         <ul className="mt-7 card_grid">
