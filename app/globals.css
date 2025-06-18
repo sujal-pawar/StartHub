@@ -47,9 +47,10 @@
         @apply font-normal text-sm text-white-100/80;
     }
 
-    .pink_container {
-        @apply w-full bg-primary min-h-[530px] pattern flex justify-center items-center flex-col py-10 px-6;
+    .blue_container {
+        @apply w-full bg-gradient-to-br from-[#00b2ff] to-[#5f2eff] min-h-[530px] flex justify-center items-center flex-col py-10 px-6;
     }
+
 
     .tag {
         @apply bg-secondary px-6 py-3 font-work-sans font-bold rounded-sm uppercase relative tag-tri;
@@ -97,6 +98,31 @@
     }
 
     /* idea details */
+    
+    /* startup card */
+    .startup-card {
+        @apply bg-white p-6 rounded-lg border border-black/10 hover:shadow-lg transition-shadow;
+    }
+
+    .startup_card_date {
+        @apply text-black-300 text-14-normal;
+    }
+
+    .startup_card_badge {
+        @apply inline-block bg-secondary px-3 py-1 rounded text-black text-sm font-medium;
+    }
+
+    .startup_card_image {
+        @apply mt-4 flex justify-end;
+    }
+    
+    .selection_container {
+        @apply px-6 py-10 max-w-7xl mx-auto;
+    }
+    
+    .no-results {
+        @apply text-black/70 font-medium text-lg;
+    }
     .divider {
         @apply border-dotted bg-zinc-400 max-w-4xl my-10 mx-auto;
     }
@@ -133,7 +159,7 @@
 
     /* startupcard */
     .startup-card {
-        @apply bg-white border-[5px] border-black py-6 px-5 rounded-[22px] shadow-200 hover:border-primary transition-all duration-500 hover:shadow-300 hover:bg-primary-100;
+        @apply bg-white border-[5px] border-black py-6 px-5 rounded-[22px] shadow-200 hover:border-blue-500 transition-all duration-500 hover:shadow-300 hover:bg-primary-100;
     }
 
     .startup-card_date {
