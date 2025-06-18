@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <>
-      <h1 className="">Home</h1>
-    </>
+    <div className="bg-black">
+      <h1 className="heading">Home</h1>
+    </div>
   );
 }

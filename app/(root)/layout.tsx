@@ -1,7 +1,7 @@
-"use client";
 
-import React from "react";
 import Navbar from "../components/Navbar";
+import React from "react";
+import dynamic from "next/dynamic";
 import { SessionProvider } from "next-auth/react";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
