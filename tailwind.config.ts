@@ -1,12 +1,11 @@
-import type {Config} from "tailwindcss";
+import type { Config } from "tailwindcss";
 
 const config: Config = {
-    darkMode: "class",    content: [
-        "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-        "./components/**/*.{js,ts,jsx,tsx,mdx}",
-        "./app/**/*.{js,ts,jsx,tsx,mdx}",
-        "./sanity/**/*.{js,ts,jsx,tsx,mdx}",
-        "./**/*.{js,ts,jsx,tsx,mdx}",
+    darkMode: "class",
+    content: [
+        "./src/**/*.{js,ts,jsx,tsx}",     // adjust according to your project structure
+        "./pages/**/*.{js,ts,jsx,tsx}",
+        "./components/**/*.{js,ts,jsx,tsx}",
     ],
     theme: {
         extend: {
