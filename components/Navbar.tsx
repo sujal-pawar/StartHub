@@ -11,15 +11,14 @@ import { ThemeToggle } from "./ThemeToggle";
 const Navbar = () => {
   const { data: session } = useSession();
 
-  return (
-    <header className="sticky top-0 z-50 px-5 py-3 dark:bg-black bg-white shadow-md ">
+  return (    <header className="sticky top-0 z-50 px-5 py-3 dark:bg-black bg-white shadow-md">
       <nav className="max-w-7xl mx-auto flex justify-between items-center">
         <Link href="/" className="transition-transform hover:scale-105">
           <div className="flex items-center justify-center font-semibold gap-2">
-       </nav>     <Image src={logo} alt="logo" width={50} height={50} className="object-contain" />
-            <h1 className="text-2xl font-serif text-zinc-900 dark:text-white </div>font-bold tracking-tight">StartHub</h1>
+            <Image src={logo} alt="logo" width={50} height={50} className="object-contain" />
+            <h1 className="text-2xl font-serif text-zinc-900 dark:text-white font-bold tracking-tight">StartHub</h1>
           </div>
-        </Link>        
+        </Link>
         <div className="flex items-center gap-5">
           <ThemeToggle />
           
