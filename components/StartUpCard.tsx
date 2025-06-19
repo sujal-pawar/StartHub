@@ -62,7 +62,7 @@ function StartUpCard({ post }: { post: StartUpTypeCard} ) {
                 <Link href={`/?query=${category?.toLowerCase()}`}>
                     <p className='text-16-medium dark:text-white'>{category}</p>
                 </Link>
-                <Button className='startup-card_btn' asChild>
+                <Button className='startup-card_btn ' asChild>
                     <Link className='' href={`/startup/${_id}`}>
                         Details
                     </Link>

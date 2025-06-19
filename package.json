@@ -12,10 +12,6 @@
     "typegen": "sanity schema extract --path=./sanity/extract.json && sanity typegen generate"
   },
   "packageManager": "npm@10.5.2",
-  "overrides": {
-    "react": "$react",
-    "react-dom": "$react-dom"
-  },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.1.10",
     "@radix-ui/react-slot": "^1.2.3",
@@ -25,7 +21,7 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.517.0",
-    "next": "15.3.2",
+    "next": "15.3.4",
     "next-auth": "^5.0.0-beta.27",
     "next-sanity": "^9.12.0",
     "react": "^19.0.0",

@@ -16,7 +16,7 @@ const Navbar = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <header className="sticky top-0 z-50 px-3 sm:px-5 py-2 sm:py-3 dark:bg-black bg-white shadow-md">
+    <header className="sticky top-0 z-50 px-3 sm:px-5 py-2 sm:py-3 dark:bg-black/80 bg-white shadow-md">
       <nav className="max-w-7xl mx-auto flex justify-between items-center">
         <Link href="/" className="transition-transform hover:scale-105">
           <div className="flex items-center justify-center font-semibold gap-1 sm:gap-2">
