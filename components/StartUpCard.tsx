@@ -3,20 +3,9 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Button } from './ui/button'
+import { Author, Startup } from '@/sanity/types'
 
-interface StartUpTypeCard {
-  _id: string;
-  _createdAt: string;
-  title: string;
-  description: string;
-  image: string;
-  views: number;
-  category: string;
-  author: {
-    id: string;
-    name: string;
-  };
-}
+export type StartUpTypeCard = Omit<Startup,"author"> & {author?: Author}
 
 // Helper function to format date
 const formatDate = (dateString: string): string => {
@@ -29,7 +18,7 @@ const formatDate = (dateString: string): string => {
 
 function StartUpCard({ post }: { post: StartUpTypeCard} ) {
 
-    const { _createdAt, views, author: { id: authorId, name }, title, category, _id, image, description } = post
+    const { _createdAt, views, author,title, category, _id, image, description } = post
 
     return (
         <li className="startup-card group">
@@ -45,14 +34,14 @@ function StartUpCard({ post }: { post: StartUpTypeCard} ) {
 
             <div className='flex-between mt-5 gap-5'>
                 <div className='flex-1'>
-                    <Link href={`/user/${authorId}`}>
-                        <p className='text-16-medium font-serif line-clamp-1'>{name}</p>
+                    <Link href={`/user/${author?._id}`}>
+                        <p className='font-mono tracking-tighter '>{author?.name}</p>
                     </Link>
                     <Link href={`/startup/${_id}`} className='text-20-semibold mt-1 line-clamp-2 hover:underline'>
                         <h3 className='text-26-semibold line-clamp-1'>{title}</h3>
                     </Link>
                 </div>
-                <Link href={`/user/${authorId}`}>
+                <Link href={`/user/${author?._id}`}>
                     <div className="w-[50px] h-[50px] overflow-hidden rounded-full">
                         <img
                             src="https://images.pexels.com/photos/1759530/pexels-photo-1759530.jpeg"
@@ -72,7 +61,7 @@ function StartUpCard({ post }: { post: StartUpTypeCard} ) {
             </Link>
 
             <div className='flex-between gap-3 mt-5'>
-                <Link href={`/?query=${category.toLowerCase()}`}>
+                <Link href={`/?query=${category?.toLowerCase()}`}>
                     <p className='text-16-medium'>{category}</p>
                 </Link>
                 <Button className='startup-card_btn' asChild>

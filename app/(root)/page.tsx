@@ -8,20 +8,7 @@ export default async function Home({ searchParams }: {
   searchParams: Promise<{ query?: string }>
 }) {
   const query = (await searchParams).query;
-
   const posts = await client.fetch(STARTUPS_QUERIES);
-  console.log(JSON.stringify(posts,null,2))
-
-  // const posts = [{
-  //   _createdAt: new Date().toISOString(), // Convert Date to string
-  //   views: 55,
-  //   author: { _id: "1", name: "Sujal" },
-  //   _id: "1",
-  //   description: 'This is description of the startup. It is a great startup that aims to solve many problems in the world.',
-  //   image: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHN0YXJ0dXB8ZW58MHx8MHx8fDA%3D',
-  //   category: 'Robots',
-  //   title: "We Robots",
-  // },]
 
   return (
     <>
