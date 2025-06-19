@@ -10,10 +10,10 @@ export default async function Home({ searchParams }: {
   const posts = [{
     _createdAt: new Date().toISOString(), // Convert Date to string
     views: 55,
-    author: { _id: "1",name:"Sujal" },
+    author: { _id: "1", name: "Sujal" },
     _id: "1",
     description: 'This is description of the startup. It is a great startup that aims to solve many problems in the world.',
-    image:'https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHN0YXJ0dXB8ZW58MHx8MHx8fDA%3D',
+    image: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHN0YXJ0dXB8ZW58MHx8MHx8fDA%3D',
     category: 'Robots',
     title: "We Robots",
   },]
@@ -21,7 +21,8 @@ export default async function Home({ searchParams }: {
   return (
     <>
       <section className="blue_container">
-        <h1 className="heading">Pitch Your StartUp <br /> Connect with Entrepreneurs</h1>
+        <h1 className="heading">Turn Your Idea Into Reality <br />
+          Join the startup wave.</h1>
         <p className="sub-heading !max-w-3xl">
           Join our community to share your vision and collaborate on innovative projects.
         </p>
