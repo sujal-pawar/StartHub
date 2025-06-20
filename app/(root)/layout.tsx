@@ -8,7 +8,8 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
     return (
-        <main className="font-work-sans">
+        <main className="font-work-sans
+        ">
             <SessionProvider>
                 <ThemeProvider defaultTheme="system" storageKey="theme">
                     <Navbar />

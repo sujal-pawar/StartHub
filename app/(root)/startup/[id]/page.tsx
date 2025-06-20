@@ -5,14 +5,20 @@ import { profile } from 'console';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import React from 'react'
+import React, { Suspense } from 'react'
 export const experimental_ppr = true;
+import markdownit from 'markdown-it';   
+import { Skeleton } from '@/components/ui/skeleton';
+import View from '@/components/View';
+
+const md = markdownit();
+
 const page = async ({ params }: { params: Promise<{ id: string }> }) => {
     const id = (await params).id;
     const post = await client.fetch(STARTUP_BY_ID_QUERY, { id });
 
     if (!post) return notFound();
-
+    const parsedContent = md.render(post?.pitch || '');
     return (
         <>
             <section className='blue_container !min-h-[230px]'>
@@ -36,13 +42,27 @@ const page = async ({ params }: { params: Promise<{ id: string }> }) => {
                             </div>
                             <div >
                                 <p className='dark:text-white text-20-medium'>{post.author?.name}</p>
-                                <p className='text-16-medium dark:text-white text-black-300'>{post.author?.username}</p>
+                                <p className='text-16-medium dark:text-white/60 text-black-300'>{post.author?.username}</p>
                             </div>
                         </Link>
                         <p className='category-tag'>{post.category} </p>
                     </div>
-                    <h3 className='text-30-bold'>Pitch Details</h3>
+                    <h3 className='text-30-bold dark:text-white'>Pitch Details</h3>
+                    {parsedContent ? (
+                     <article className='prose dark:text-white max-w-4xl font-work-sans break-all'
+                     dangerouslySetInnerHTML={{ __html: parsedContent }}
+                     />
+                    ):(
+                        <p className='text-16-medium dark:text-white text-black-300'>No pitch details available.</p>                         
+                    )}
                 </div>
+                <hr className='divider'/>
+                {/* TODO : Editor Selected Startups */}
+            </section>
+            <section>
+                <Suspense fallback={<Skeleton className='view_skeleton' />}>
+                    <View id={id}/>
+                </Suspense>
             </section>
         </>
     )
