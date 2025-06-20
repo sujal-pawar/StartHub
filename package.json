@@ -36,9 +36,11 @@
     "sanity": "^3.93.0",
     "sanity-plugin-markdown": "^5.1.1",
     "server-only": "^0.0.1",
+    "slugify": "^1.6.6",
     "styled-components": "^6.1.19",
     "tailwind-merge": "^3.3.1",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "zod": "^3.25.67"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
