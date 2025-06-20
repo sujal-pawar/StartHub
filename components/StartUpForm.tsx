@@ -75,9 +75,8 @@ const StartupForm = () => {
     error: "",
     status: "INITIAL",
   });
-
   return (
-    <form action={formAction} className="startup-form">
+    <form action={formAction} className="startup-form" suppressHydrationWarning>
       <div>
         <label htmlFor="title" className="startup-form_label">
           Title
@@ -88,6 +87,7 @@ const StartupForm = () => {
           className="startup-form_input"
           required
           placeholder="Startup Title"
+          suppressHydrationWarning
         />
 
         {errors.title && <p className="startup-form_error">{errors.title}</p>}
@@ -96,13 +96,13 @@ const StartupForm = () => {
       <div>
         <label htmlFor="description" className="startup-form_label">
           Description
-        </label>
-        <Textarea
+        </label>        <Textarea
           id="description"
           name="description"
           className="startup-form_textarea"
           required
           placeholder="Startup Description"
+          suppressHydrationWarning
         />
 
         {errors.description && (
@@ -113,13 +113,13 @@ const StartupForm = () => {
       <div>
         <label htmlFor="category" className="startup-form_label">
           Category
-        </label>
-        <Input
+        </label>        <Input
           id="category"
           name="category"
           className="startup-form_input"
           required
           placeholder="Startup Category (Tech, Health, Education...)"
+          suppressHydrationWarning
         />
 
         {errors.category && (
@@ -130,13 +130,13 @@ const StartupForm = () => {
       <div>
         <label htmlFor="link" className="startup-form_label">
           Image URL
-        </label>
-        <Input
+        </label>        <Input
           id="link"
           name="link"
           className="startup-form_input"
           required
           placeholder="Startup Image URL"
+          suppressHydrationWarning
         />
 
         {errors.link && <p className="startup-form_error">{errors.link}</p>}
