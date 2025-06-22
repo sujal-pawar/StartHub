@@ -53,8 +53,7 @@ const Navbar = () => {
               >
                 <span className="text-zinc-800 dark:text-white font-medium">Logout</span>
               </button>
-              
-                <Link href={`/user/${session?.user?.id}`} className="transition-transform hover:scale-105">
+                  <Link href={`/user/${session.id}`} className="transition-transform hover:scale-105">
                 <Avatar className="size-10 border-2 border-zinc-200 dark:border-zinc-700">
                   <AvatarImage
                   src={session?.user?.image || ""}
@@ -84,9 +83,8 @@ const Navbar = () => {
             
             
             {session && session?.user ? (
-              <>
-                <div className="flex-between items-center gap-2 mb-2 py-3">
-                  <div className="flex gap-2 justify-center items-center">
+              <>                <div className="flex-between items-center gap-2 mb-2 py-3">
+                  <Link href={`/user/${session.id}`} className="flex gap-2 justify-center items-center">
                   <Avatar className="size-8 border border-zinc-200 dark:border-zinc-700">
                     <AvatarImage
                       src={session?.user?.image || ""}
@@ -98,7 +96,7 @@ const Navbar = () => {
                     </AvatarFallback>
                   </Avatar>
                   <span className="font-medium text-zinc-800 dark:text-white">{session?.user?.name}</span>
-                  </div>
+                  </Link>
                   <Link 
                   href="/startup/create"
                   className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"

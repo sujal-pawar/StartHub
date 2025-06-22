@@ -44,7 +44,7 @@ function StartUpCard({ post }: { post: StartupTypeCard} ) {
                 <Link href={`/user/${author?._id}`}>
                     <div className="w-[50px] h-[50px] overflow-hidden rounded-full">
                         <img
-                            src="https://images.pexels.com/photos/1759530/pexels-photo-1759530.jpeg"
+                            src={author?.image}
                             alt="profile"
                             width={50}
                             height={50}
