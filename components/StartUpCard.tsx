@@ -3,8 +3,10 @@ import React from 'react'
 import Link from 'next/link'
 import { Button } from './ui/button'
 import { Author, Startup } from '@/sanity/types'
+import { Skeleton } from './ui/skeleton'
+import { cn } from '@/lib/utils'
 
-export type StartUpTypeCard = Omit<Startup,"author"> & {author?: Author}
+export type StartupTypeCard = Omit<Startup,"author"> & {author?: Author}
 
 const formatDate = (dateString: string): string => {
   return new Date(dateString).toLocaleDateString('en-US', {
@@ -14,7 +16,7 @@ const formatDate = (dateString: string): string => {
   });
 }
 
-function StartUpCard({ post }: { post: StartUpTypeCard} ) {
+function StartUpCard({ post }: { post: StartupTypeCard} ) {
 
     const { _createdAt, views, author,title, category, _id, image, description } = post
 
@@ -71,5 +73,14 @@ function StartUpCard({ post }: { post: StartUpTypeCard} ) {
         </li>
     )
 }
+export const StartupCardSkeleton = () => (
+  <>
+    {[0, 1, 2, 3, 4].map((index: number) => (
+      <li key={cn("skeleton", index)}>
+        <Skeleton className="startup-card_skeleton" />
+      </li>
+    ))}
+  </>
+);
 
 export default StartUpCard

@@ -54,10 +54,10 @@ const Navbar = () => {
                 <span className="text-zinc-800 dark:text-white font-medium">Logout</span>
               </button>
               
-              <Link href={`/user/${session?.user?.email}`} className="transition-transform hover:scale-105">
+                <Link href={`/user/${session?.user?.id}`} className="transition-transform hover:scale-105">
                 <Avatar className="size-10 border-2 border-zinc-200 dark:border-zinc-700">
                   <AvatarImage
-                    src={session?.user?.image || ""}
+                  src={session?.user?.image || ""}
                     alt={session?.user?.name || ""}
                     className="object-cover"
                   />

@@ -246,6 +246,35 @@ export type AUTHOR_BY_GITHUB_ID_QUERYResult = {
   bio: string | null;
   githubId: null;
 } | null;
+// Variable: AUTHOR_BY_ID_QUERY
+// Query: *[_type == "author" && _id == $id][0]{    _id,    id,    name,    username,    image,    bio,    githubId  }
+export type AUTHOR_BY_ID_QUERYResult = {
+  _id: string;
+  id: number | null;
+  name: string | null;
+  username: string | null;
+  image: string | null;
+  bio: string | null;
+  githubId: null;
+} | null;
+// Variable: STARTUPS_BY_AUTHOR_QUERY
+// Query: *[_type == "startup" && author._ref == $id] | order(_createdAt desc){  _id,    title,    slug,    _createdAt,    author -> {    _id, name, image, bio    },    views,    description,    image,    category    }
+export type STARTUPS_BY_AUTHOR_QUERYResult = Array<{
+  _id: string;
+  title: string | null;
+  slug: Slug | null;
+  _createdAt: string;
+  author: {
+    _id: string;
+    name: string | null;
+    image: string | null;
+    bio: string | null;
+  } | null;
+  views: number | null;
+  description: string | null;
+  image: string | null;
+  category: string | null;
+}>;
 
 // Query TypeMap
 import "@sanity/client";
@@ -255,5 +284,7 @@ declare module "@sanity/client" {
     "*[_type == \"startup\" && _id==$id][0]{\n  _id,\n  title,\n  slug,\n  _createdAt,\n  author ->{\n    _id,name,username,image,bio\n  },\n  views,\n  description,\n  image,\n  category,\n  pitch\n}": STARTUP_BY_ID_QUERYResult;
     "*[_type == \"startup\" && _id==$id][0]{_id,views}": STARTUPS_VIEWS_QUERYResult;
     "*[_type == \"author\" && id == $id][0]{\n    _id,\n    id,\n    name,\n    username,\n    image,\n    bio,\n    githubId\n  }": AUTHOR_BY_GITHUB_ID_QUERYResult;
+    "*[_type == \"author\" && _id == $id][0]{\n    _id,\n    id,\n    name,\n    username,\n    image,\n    bio,\n    githubId\n  }": AUTHOR_BY_ID_QUERYResult;
+    "*[_type == \"startup\" && author._ref == $id] | order(_createdAt desc){\n  _id,\n    title,\n    slug,\n    _createdAt,\n    author -> {\n    _id, name, image, bio\n    },\n    views,\n    description,\n    image,\n    category\n    }": STARTUPS_BY_AUTHOR_QUERYResult;
   }
 }
