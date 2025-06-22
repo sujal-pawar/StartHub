@@ -1,7 +1,6 @@
 import { formatDate } from '@/lib/utils';
 import { client } from '@/sanity/lib/client';
 import { STARTUP_BY_ID_QUERY } from '@/sanity/lib/queries';
-import { profile } from 'console';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -10,6 +9,42 @@ export const experimental_ppr = true;
 import markdownit from 'markdown-it';   
 import { Skeleton } from '@/components/ui/skeleton';
 import View from '@/components/View';
+import { Metadata, ResolvingMetadata } from 'next';
+
+import { createMetadata } from "@/lib/metadata";
+
+// Generate dynamic metadata for each startup page
+export async function generateMetadata(
+  { params }: { params: { id: string } },
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  // Fetch startup data
+  const id = params.id;
+  const post = await client.fetch(STARTUP_BY_ID_QUERY, { id });
+  
+  // If no post is found, return default metadata
+  if (!post) {
+    return createMetadata({
+      title: 'Startup Not Found',
+      description: 'The startup you are looking for could not be found.'
+    });
+  }
+
+  // Build keywords array with correct type handling
+  const keywords: string[] = ['startup', 'innovation', 'entrepreneurship'];
+  if (post.category) keywords.push(post.category);
+  if (post.title) keywords.push(post.title);
+  
+  return createMetadata({
+    title: post.title || 'Startup',
+    description: post.description || 'Explore this innovative startup on StartHub',
+    imageUrl: post.image || '/logo.svg',
+    keywords,
+    isArticle: true,
+    authorName: post.author?.name,
+    canonicalPath: `/startup/${id}`
+  });
+}
 
 const md = markdownit();
 
@@ -28,14 +63,16 @@ const page = async ({ params }: { params: Promise<{ id: string }> }) => {
             </section>
 
             <section className='section_container'>
-                <img src={post.image} alt="thumbnail" className='w-full h-auto rounded-xl' />
+                {post.image && (
+                    <img src={post.image} alt={post.title || "Startup thumbnail"} className='w-full h-auto rounded-xl' />
+                )}
                 <div className='space-y-5 mt-10 max-w-4xl mx-auto'>
                     <div className='flex-between gap-5'>
                         <Link href={`/user/${post.author?._id}`} className='flex items-center gap-2 mb-3'>
                             <div className='w-[64px] h-[64px] overflow-hidden rounded-full'>
                                 <Image
-                                    src={post.author?.image}
-                                    alt='profile'
+                                    src={post.author?.image || '/logo.svg'}
+                                    alt={post.author?.name || 'profile'}
                                     height={64}
                                     width={64}
                                     className='rounded-full drop-shadow-lg' />

@@ -6,8 +6,39 @@ import Image from "next/image";
 import UserStartups from "@/components/UserStartups";
 import { Suspense } from "react";
 import { StartupCardSkeleton } from "@/components/StartUpCard";
+import { Metadata, ResolvingMetadata } from 'next';
 
 export const experimental_ppr = true;
+
+import { createMetadata } from "@/lib/metadata";
+
+// Generate dynamic metadata for each user profile page
+export async function generateMetadata(
+  { params }: { params: { id: string } },
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  // Fetch user data
+  const id = params.id;
+  const user = await client.fetch(AUTHOR_BY_ID_QUERY, { id });
+  
+  // If no user is found, return default metadata
+  if (!user) {
+    return createMetadata({
+      title: 'User Not Found',
+      description: 'The user profile you are looking for could not be found.'
+    });
+  }
+    const userName = user.name || 'StartHub User';
+  
+  return createMetadata({
+    title: userName,
+    description: user.bio || `${userName}'s profile on StartHub - Connect with innovators and entrepreneurs`,
+    imageUrl: user.image || '/logo.svg',
+    keywords: ['profile', 'entrepreneur', 'founder', 'innovator'],
+    authorName: user.username || userName,
+    canonicalPath: `/user/${id}`
+  });
+}
 
 const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
   const id = (await params).id;
