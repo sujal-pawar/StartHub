@@ -4,23 +4,156 @@
   <img src="./app/assets/logo.png" alt="StartHub Logo" width="150" />
   <h3>Connect, Innovate, Launch</h3>
   <p>A feature-rich platform for entrepreneurs to showcase their startups and connect with innovators</p>
+  
+  <p align="center">
+    <a href="#">
+      <img src="https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js" alt="Next.js" />
+    </a>
+    <a href="#">
+      <img src="https://img.shields.io/badge/TypeScript-blue?style=for-the-badge&logo=typescript" alt="TypeScript" />
+    </a>
+    <a href="#">
+      <img src="https://img.shields.io/badge/Sanity-CMS-red?style=for-the-badge&logo=sanity" alt="Sanity.io" />
+    </a>
+    <a href="#">
+      <img src="https://img.shields.io/badge/Tailwind-CSS-38bdf8?style=for-the-badge&logo=tailwindcss" alt="Tailwind CSS" />
+    </a>
+    <a href="#">
+      <img src="https://img.shields.io/badge/NextAuth.js-Auth-green?style=for-the-badge&logo=auth0" alt="NextAuth.js" />
+    </a>
+  </p>
 </div>
+
+<hr />
 
 ## 🚀 About The Project
 
 StartHub is a comprehensive platform designed for entrepreneurs and startup founders to showcase their ventures, connect with like-minded individuals, and track engagement. The platform allows users to create detailed profiles for their startups, including descriptions, pitches, and visuals, while enabling visitors to discover and engage with innovative projects across various categories.
 
-### Key Features
+### ✨ Key Features
 
-- **Authentication System**: Secure GitHub OAuth integration with custom login page
-- **Startup Showcase**: Detailed startup profiles with markdown pitch support
-- **User Profiles**: Custom profiles for entrepreneurs and founders
-- **Search Functionality**: Find startups by name, category, or founder
-- **View Tracking**: Analytics on startup profile views
-- **Responsive Design**: Modern UI that works across all devices
-- **Dark/Light Mode**: Theme switching with system preference detection
+<table>
+  <tr>
+    <td>
+      <img src="https://img.icons8.com/fluency/48/000000/login-rounded.png" width="30" alt="Auth"/>
+    </td>
+    <td><b>Authentication System</b></td>
+    <td>Secure GitHub OAuth integration with custom branded login page</td>
+  </tr>
+  <tr>
+    <td>
+      <img src="https://img.icons8.com/fluency/48/000000/rocket.png" width="30" alt="Startup"/>
+    </td>
+    <td><b>Startup Showcase</b></td>
+    <td>Detailed startup profiles with markdown pitch support</td>
+  </tr>
+  <tr>
+    <td>
+      <img src="https://img.icons8.com/fluency/48/000000/user-male-circle.png" width="30" alt="Profile"/>
+    </td>
+    <td><b>User Profiles</b></td>
+    <td>Custom profiles for entrepreneurs and founders</td>
+  </tr>
+  <tr>
+    <td>
+      <img src="https://img.icons8.com/fluency/48/000000/search.png" width="30" alt="Search"/>
+    </td>
+    <td><b>Search Functionality</b></td>
+    <td>Find startups by name, category, or founder</td>
+  </tr>
+  <tr>
+    <td>
+      <img src="https://img.icons8.com/fluency/48/000000/bar-chart.png" width="30" alt="Analytics"/>
+    </td>
+    <td><b>View Tracking</b></td>
+    <td>Analytics on startup profile views</td>
+  </tr>
+  <tr>
+    <td>
+      <img src="https://img.icons8.com/fluency/48/000000/responsive.png" width="30" alt="Responsive"/>
+    </td>
+    <td><b>Responsive Design</b></td>
+    <td>Modern UI that works across all devices</td>
+  </tr>
+  <tr>
+    <td>
+      <img src="https://img.icons8.com/fluency/48/000000/theme-park.png" width="30" alt="Theme"/>
+    </td>
+    <td><b>Dark/Light Mode</b></td>
+    <td>Theme switching with system preference detection</td>
+  </tr>
+</table>
 
 ## 🛠️ Tech Stack
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" width="96">
+        <a href="https://nextjs.org">
+          <img src="https://skillicons.dev/icons?i=nextjs" width="48" height="48" alt="Next.js" />
+        </a>
+        <br>Next.js 14
+      </td>
+      <td align="center" width="96">
+        <a href="https://react.dev">
+          <img src="https://skillicons.dev/icons?i=react" width="48" height="48" alt="React" />
+        </a>
+        <br>React
+      </td>
+      <td align="center" width="96">
+        <a href="https://www.typescriptlang.org">
+          <img src="https://skillicons.dev/icons?i=ts" width="48" height="48" alt="TypeScript" />
+        </a>
+        <br>TypeScript
+      </td>
+      <td align="center" width="96">
+        <a href="https://tailwindcss.com">
+          <img src="https://skillicons.dev/icons?i=tailwind" width="48" height="48" alt="Tailwind" />
+        </a>
+        <br>Tailwind
+      </td>
+      <td align="center" width="96">
+        <a href="https://ui.shadcn.com">
+          <img src="https://ui.shadcn.com/favicon.ico" width="48" height="48" alt="shadcn/ui" />
+        </a>
+        <br>shadcn/ui
+      </td>
+    </tr>
+    <tr>
+      <td align="center" width="96">
+        <a href="https://next-auth.js.org">
+          <img src="https://next-auth.js.org/img/favicon.ico" width="48" height="48" alt="NextAuth.js" />
+        </a>
+        <br>NextAuth.js
+      </td>
+      <td align="center" width="96">
+        <a href="https://www.sanity.io">
+          <img src="https://skillicons.dev/icons?i=sanity" width="48" height="48" alt="Sanity" />
+        </a>
+        <br>Sanity.io
+      </td>
+      <td align="center" width="96">
+        <a href="https://sentry.io">
+          <img src="https://sentry.io/_assets/logos/favicon-74a89ae9df628b11a2d4b95ed665c34e.ico" width="48" height="48" alt="Sentry" />
+        </a>
+        <br>Sentry
+      </td>
+      <td align="center" width="96">
+        <a href="https://vercel.com">
+          <img src="https://skillicons.dev/icons?i=vercel" width="48" height="48" alt="Vercel" />
+        </a>
+        <br>Vercel
+      </td>
+      <td align="center" width="96">
+        <a href="https://github.com">
+          <img src="https://skillicons.dev/icons?i=github" width="48" height="48" alt="GitHub" />
+        </a>
+        <br>GitHub
+      </td>
+    </tr>
+  </table>
+</div>
 
 - **Frontend**: Next.js 14 with App Router, React, TypeScript
 - **Styling**: Tailwind CSS with shadcn/ui components
@@ -197,6 +330,79 @@ Creating a resilient application required comprehensive error handling:
 - Network error detection and offline support
 - User feedback for error states
 
+## 🏗️ Project Architecture
+
+<div align="center">
+  <img src="https://placehold.co/800x400?text=StartHub+Architecture+Diagram" alt="Architecture Diagram" width="800"/>
+</div>
+
+```
++-------------------+     +----------------------+     +-------------------+
+|                   |     |                      |     |                   |
+|  Client Browser   +---->+  Next.js App Router  +---->+  Sanity CMS API   |
+|                   |     |                      |     |                   |
++-------------------+     +----------------------+     +-------------------+
+                          |                      |
+                          |  +---------------+   |     +-------------------+
+                          |  |               |   |     |                   |
+                          +--+  GitHub Auth  +---+---->+  NextAuth.js API  |
+                          |  |               |   |     |                   |
+                          |  +---------------+   |     +-------------------+
+                          |                      |
+                          |  +---------------+   |     +-------------------+
+                          |  |               |   |     |                   |
+                          +--+  Error Track  +---+---->+  Sentry API       |
+                          |  |               |   |     |                   |
+                          |  +---------------+   |     +-------------------+
+                          |                      |
+                          +----------------------+
+```
+> **Note:** Replace the placeholder architecture diagram with an actual diagram of your application architecture when available.
+
+## 🔗 Quick Links
+
+<div align="center">
+  
+  [🚀 About](#-about-the-project) • 
+  [🛠️ Tech Stack](#️-tech-stack) • 
+  [🖼️ Showcase](#️-project-showcase) • 
+  [📚 What I Learned](#-what-i-learned) • 
+  [🏗️ Architecture](#️-project-architecture) • 
+  [🔧 Getting Started](#-getting-started)
+  
+</div>
+
+<hr />
+
+## 🖼️ Project Showcase
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <strong>Homepage</strong><br/>
+        <img src="https://placehold.co/600x400?text=StartHub+Homepage" alt="Homepage Screenshot" width="400"/>
+      </td>
+      <td align="center">
+        <strong>Startup Details</strong><br/>
+        <img src="https://placehold.co/600x400?text=Startup+Details+Page" alt="Startup Details Screenshot" width="400"/>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <strong>Custom Login</strong><br/>
+        <img src="https://placehold.co/600x400?text=Login+Page" alt="Login Page Screenshot" width="400"/>
+      </td>
+      <td align="center">
+        <strong>User Profile</strong><br/>
+        <img src="https://placehold.co/600x400?text=User+Profile" alt="User Profile Screenshot" width="400"/>
+      </td>
+    </tr>
+  </table>
+</div>
+
+> **Note:** The placeholders above should be replaced with actual screenshots of your application. Take screenshots showing the key features and UI of your application and replace the placeholder URLs.
+
 ## 🔧 Getting Started
 
 ### Prerequisites
@@ -251,3 +457,72 @@ Creating a resilient application required comprehensive error handling:
 ## 📝 License
 
 Distributed under the MIT License. See `LICENSE` for more information.
+
+## 🌟 Credits and Acknowledgments
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <a href="https://nextjs.org">
+          <img src="https://skillicons.dev/icons?i=nextjs" width="40" height="40" alt="Next.js" />
+          <br />
+          <sub><b>Next.js</b></sub>
+        </a>
+      </td>
+      <td align="center">
+        <a href="https://www.sanity.io">
+          <img src="https://skillicons.dev/icons?i=sanity" width="40" height="40" alt="Sanity" />
+          <br />
+          <sub><b>Sanity.io</b></sub>
+        </a>
+      </td>
+      <td align="center">
+        <a href="https://ui.shadcn.com/">
+          <img src="https://ui.shadcn.com/favicon.ico" width="40" height="40" alt="shadcn/ui" />
+          <br />
+          <sub><b>shadcn/ui</b></sub>
+        </a>
+      </td>
+      <td align="center">
+        <a href="https://tailwindcss.com/">
+          <img src="https://skillicons.dev/icons?i=tailwind" width="40" height="40" alt="Tailwind" />
+          <br />
+          <sub><b>Tailwind CSS</b></sub>
+        </a>
+      </td>
+      <td align="center">
+        <a href="https://next-auth.js.org/">
+          <img src="https://next-auth.js.org/img/favicon.ico" width="40" height="40" alt="NextAuth.js" />
+          <br />
+          <sub><b>NextAuth.js</b></sub>
+        </a>
+      </td>
+      <td align="center">
+        <a href="https://sentry.io/">
+          <img src="https://sentry.io/_assets/logos/favicon-74a89ae9df628b11a2d4b95ed665c34e.ico" width="40" height="40" alt="Sentry" />
+          <br />
+          <sub><b>Sentry</b></sub>
+        </a>
+      </td>
+      <td align="center">
+        <a href="https://vercel.com/">
+          <img src="https://skillicons.dev/icons?i=vercel" width="40" height="40" alt="Vercel" />
+          <br />
+          <sub><b>Vercel</b></sub>
+        </a>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<hr />
+
+<div align="center">
+  <p>Created with ❤️ by Your Name</p>
+  <p>
+    <a href="https://github.com/yourgithub">GitHub</a> •
+    <a href="https://twitter.com/yourtwitter">Twitter</a> •
+    <a href="https://linkedin.com/in/yourlinkedin">LinkedIn</a>
+  </p>
+</div>
