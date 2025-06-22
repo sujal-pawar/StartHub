@@ -9,7 +9,16 @@ export default async function Home({ searchParams }: {
 }) {
   const query = (await searchParams).query;
   const params = {search:query || null};
-  const {data : posts } =await sanityFetch({query:STARTUPS_QUERIES,params});
+  
+  // Use the original approach but wrap in try/catch for error handling
+  let posts: any[] = [];
+  try {
+    const response = await sanityFetch({query:STARTUPS_QUERIES,params});
+    posts = response?.data || [];
+  } catch (error) {
+    console.error("Error fetching startups:", error);
+    // Continue with empty posts array if there's an error
+  }
 
   const session = await auth();
   // console.log(session?.id);

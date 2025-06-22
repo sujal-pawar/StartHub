@@ -13,8 +13,14 @@ const Navbar = () => {
   const { data: session } = useSession();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [avatarError, setAvatarError] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  
+  // Reset avatar error when session changes
+  useEffect(() => {
+    setAvatarError(false);
+  }, [session?.user?.image]);
   
   // Add scroll effect
   useEffect(() => {
@@ -102,17 +108,19 @@ const Navbar = () => {
                 <LogOut className="size-5 text-red-500 dark:text-red-400" />
                 <span className="text-zinc-800 dark:text-white font-medium">Logout</span>
               </button>
-              
-              <Link 
+                <Link 
                 href={`/user/${session.id}`} 
                 className="relative group p-1 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800/70 transition-all"
               >
                 <Avatar className="size-10 border-2 border-zinc-200 dark:border-zinc-700 group-hover:border-blue-400 transition-colors">
-                  <AvatarImage
-                    src={session?.user?.image || ""}
-                    alt={session?.user?.name || ""}
-                    className="object-cover"
-                  />
+                  {!avatarError ? (
+                    <AvatarImage
+                      src={session?.user?.image || ""}
+                      alt={session?.user?.name || ""}
+                      className="object-cover"
+                      onError={() => setAvatarError(true)}
+                    />
+                  ) : null}
                   <AvatarFallback className="bg-zinc-200 dark:bg-zinc-700 text-zinc-800 dark:text-white">
                     {session?.user?.name?.charAt(0) || "U"}
                   </AvatarFallback>
@@ -132,13 +140,15 @@ const Navbar = () => {
                   href={`/user/${session.id}`} 
                   className="flex items-center gap-3 p-3 rounded-xl hover:bg-zinc-100 dark:hover:bg-zinc-800/70 transition-all"
                   onClick={() => setIsMenuOpen(false)}
-                >
-                  <Avatar className="size-12 border-2 border-zinc-200 dark:border-zinc-700">
-                    <AvatarImage
-                      src={session?.user?.image || ""}
-                      alt={session?.user?.name || ""}
-                      className="object-cover"
-                    />
+                >                  <Avatar className="size-12 border-2 border-zinc-200 dark:border-zinc-700">
+                    {!avatarError ? (
+                      <AvatarImage
+                        src={session?.user?.image || ""}
+                        alt={session?.user?.name || ""}
+                        className="object-cover"
+                        onError={() => setAvatarError(true)}
+                      />
+                    ) : null}
                     <AvatarFallback className="bg-zinc-200 dark:bg-zinc-700 text-zinc-800 dark:text-white">
                       {session?.user?.name?.charAt(0) || "U"}
                     </AvatarFallback>
