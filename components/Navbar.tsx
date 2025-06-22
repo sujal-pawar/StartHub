@@ -1,9 +1,9 @@
 "use client";
 
-import { signIn, signOut, useSession } from "next-auth/react";
+import { signOut, useSession } from "next-auth/react";
 import Link from "next/link";
 import Image from "next/image";
-import { BadgePlus, LogOut, Menu, X, PlusCircle, Github, User } from "lucide-react";
+import { LogOut, Menu, X, PlusCircle, User } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import logo from '@/app/assets/logo.png';
 import { ThemeToggle } from "./ThemeToggle";
@@ -81,11 +81,11 @@ const Navbar = () => {
           ) : (
             <Menu className="h-6 w-6" />
           )}
-        </button>        {/* Desktop navigation */}
-        <div className="hidden md:flex items-center gap-5">
+        </button>        {/* Desktop navigation */}        <div className="hidden md:flex items-center gap-5">
           <ThemeToggle />
           
-          {session && session?.user ? (
+          {/* We only show navbar items for authenticated users - no login button needed */}
+          {session && session?.user && (
             <>
               <Link 
                 href="/startup/create"
@@ -122,20 +122,11 @@ const Navbar = () => {
                 </span>
               </Link>
             </>
-          ) : (
-            <button
-              onClick={() => signIn("github")}
-              type="button"
-              className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-medium transition-all hover:shadow-md active:scale-95"
-            >
-              <Github className="size-5" />
-              <span>Login with GitHub</span>
-            </button>
           )}
         </div>        {/* Mobile menu */}
         {isMenuOpen && (
           <div className="absolute top-full left-0 right-0 bg-white/95 dark:bg-black/95 backdrop-blur-md shadow-lg md:hidden flex flex-col gap-3 border-b dark:border-zinc-800 border-zinc-200 animate-in slide-in-from-top duration-300">            
-            {session && session?.user ? (
+            {session && session?.user && (
               <div className="p-4 flex flex-col gap-4">
                 <Link 
                   href={`/user/${session.id}`} 
@@ -178,22 +169,8 @@ const Navbar = () => {
                   <span>Logout</span>
                 </button>
               </div>
-            ) : (
-              <div className="p-4 flex flex-col gap-3">
-                <div className="pb-3 flex justify-end">
-                  <ThemeToggle />
-                </div>
-                
-                <button
-                  onClick={() => signIn("github")}
-                  type="button"
-                  className="flex items-center justify-center gap-2 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-medium transition-all"
-                >
-                  <Github className="size-5" />
-                  <span>Login with GitHub</span>
-                </button>
-              </div>
             )}
+            {/* Mobile menu for non-authenticated users removed - they'll be redirected to login page */}
           </div>
         )}
       </nav>
