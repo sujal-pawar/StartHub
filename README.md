@@ -248,25 +248,6 @@ Creating a resilient application required comprehensive error handling:
 
 5. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## 🌐 Deployment
-
-The project is configured for easy deployment on Vercel:
-
-1. Push your code to GitHub
-2. Import the repository on Vercel
-3. Add the environment variables
-4. Deploy
-
 ## 📝 License
 
 Distributed under the MIT License. See `LICENSE` for more information.
-
-## 🙏 Acknowledgments
-
-- [Next.js](https://nextjs.org/) for the powerful React framework
-- [Sanity.io](https://www.sanity.io/) for the flexible content platform
-- [shadcn/ui](https://ui.shadcn.com/) for the beautiful UI components
-- [Tailwind CSS](https://tailwindcss.com/) for the utility-first styling
-- [NextAuth.js](https://next-auth.js.org/) for authentication
-- [Sentry](https://sentry.io/) for monitoring and error tracking
-- [Vercel](https://vercel.com/) for hosting and deployment
