@@ -54,7 +54,7 @@ export default function LoadingAnimation({ fullScreen = true }: { fullScreen?: b
 
   return (
     <div 
-      className={`relative flex flex-col items-center justify-center ${fullScreen ? 'h-screen' : 'h-full'} w-full bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-blue-950 dark:via-indigo-950 dark:to-purple-950`}
+      className={`relative flex flex-col items-center justify-center ${fullScreen ? 'h-screen' : 'h-full'} w-full bg-white dark:bg-black`}
     >
       {/* Grid pattern in background */}
       <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-20 dark:opacity-10"></div>
