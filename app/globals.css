@@ -86,7 +86,7 @@
     }
 
     .profile_card {
-        @apply w-80 px-6 pb-6 pt-20 flex flex-col justify-center items-center bg-[#5C31FE] border-[5px] border-black shadow-100 rounded-[30px] relative z-0 h-fit max-lg:w-full;
+        @apply w-80 px-6 pb-6 pt-20 flex flex-col justify-center items-center bg-[#5C31FE] dark:bg-[#3B1DC0] border-[5px] border-black dark:border-slate-100 shadow-100 rounded-[30px] relative z-0 h-fit max-lg:w-full;
     }
 
     .profile_title {
@@ -179,7 +179,7 @@
     }
 
     .startup-card_skeleton {
-        @apply w-full h-96 rounded-[22px] bg-zinc-400;
+        @apply w-full h-96 rounded-[22px] bg-zinc-400 dark:bg-zinc-600;
     }
 
     /* startupform */

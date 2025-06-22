@@ -1,4 +1,3 @@
-
 "use client";
 
 import Navbar from "../../components/Navbar";
@@ -13,7 +12,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <SessionProvider>
                 <ThemeProvider defaultTheme="system" storageKey="theme">
                     <Navbar />
+
                     {children}
+
                 </ThemeProvider>
             </SessionProvider>
         </main>
