@@ -63,20 +63,6 @@ StartHub is a comprehensive platform designed for entrepreneurs and startup foun
   </tr>
   <tr>
     <td>
-      <img src="https://img.icons8.com/fluency/48/000000/bar-chart.png" width="30" alt="Analytics"/>
-    </td>
-    <td><b>View Tracking</b></td>
-    <td>Analytics on startup profile views</td>
-  </tr>
-  <tr>
-    <td>
-      <img src="https://img.icons8.com/fluency/48/000000/responsive.png" width="30" alt="Responsive"/>
-    </td>
-    <td><b>Responsive Design</b></td>
-    <td>Modern UI that works across all devices</td>
-  </tr>
-  <tr>
-    <td>
       <img src="https://img.icons8.com/fluency/48/000000/theme-park.png" width="30" alt="Theme"/>
     </td>
     <td><b>Dark/Light Mode</b></td>
@@ -85,75 +71,6 @@ StartHub is a comprehensive platform designed for entrepreneurs and startup foun
 </table>
 
 ## 🛠️ Tech Stack
-
-<div align="center">
-  <table>
-    <tr>
-      <td align="center" width="96">
-        <a href="https://nextjs.org">
-          <img src="https://skillicons.dev/icons?i=nextjs" width="48" height="48" alt="Next.js" />
-        </a>
-        <br>Next.js 14
-      </td>
-      <td align="center" width="96">
-        <a href="https://react.dev">
-          <img src="https://skillicons.dev/icons?i=react" width="48" height="48" alt="React" />
-        </a>
-        <br>React
-      </td>
-      <td align="center" width="96">
-        <a href="https://www.typescriptlang.org">
-          <img src="https://skillicons.dev/icons?i=ts" width="48" height="48" alt="TypeScript" />
-        </a>
-        <br>TypeScript
-      </td>
-      <td align="center" width="96">
-        <a href="https://tailwindcss.com">
-          <img src="https://skillicons.dev/icons?i=tailwind" width="48" height="48" alt="Tailwind" />
-        </a>
-        <br>Tailwind
-      </td>
-      <td align="center" width="96">
-        <a href="https://ui.shadcn.com">
-          <img src="https://ui.shadcn.com/favicon.ico" width="48" height="48" alt="shadcn/ui" />
-        </a>
-        <br>shadcn/ui
-      </td>
-    </tr>
-    <tr>
-      <td align="center" width="96">
-        <a href="https://next-auth.js.org">
-          <img src="https://next-auth.js.org/img/favicon.ico" width="48" height="48" alt="NextAuth.js" />
-        </a>
-        <br>NextAuth.js
-      </td>
-      <td align="center" width="96">
-        <a href="https://www.sanity.io">
-          <img src="https://skillicons.dev/icons?i=sanity" width="48" height="48" alt="Sanity" />
-        </a>
-        <br>Sanity.io
-      </td>
-      <td align="center" width="96">
-        <a href="https://sentry.io">
-          <img src="https://sentry.io/_assets/logos/favicon-74a89ae9df628b11a2d4b95ed665c34e.ico" width="48" height="48" alt="Sentry" />
-        </a>
-        <br>Sentry
-      </td>
-      <td align="center" width="96">
-        <a href="https://vercel.com">
-          <img src="https://skillicons.dev/icons?i=vercel" width="48" height="48" alt="Vercel" />
-        </a>
-        <br>Vercel
-      </td>
-      <td align="center" width="96">
-        <a href="https://github.com">
-          <img src="https://skillicons.dev/icons?i=github" width="48" height="48" alt="GitHub" />
-        </a>
-        <br>GitHub
-      </td>
-    </tr>
-  </table>
-</div>
 
 - **Frontend**: Next.js 14 with App Router, React, TypeScript
 - **Styling**: Tailwind CSS with shadcn/ui components
@@ -332,9 +249,6 @@ Creating a resilient application required comprehensive error handling:
 
 ## 🏗️ Project Architecture
 
-<div align="center">
-  <img src="https://placehold.co/800x400?text=StartHub+Architecture+Diagram" alt="Architecture Diagram" width="800"/>
-</div>
 
 ```
 +-------------------+     +----------------------+     +-------------------+
@@ -373,35 +287,6 @@ Creating a resilient application required comprehensive error handling:
 </div>
 
 <hr />
-
-## 🖼️ Project Showcase
-
-<div align="center">
-  <table>
-    <tr>
-      <td align="center">
-        <strong>Homepage</strong><br/>
-        <img src="https://placehold.co/600x400?text=StartHub+Homepage" alt="Homepage Screenshot" width="400"/>
-      </td>
-      <td align="center">
-        <strong>Startup Details</strong><br/>
-        <img src="https://placehold.co/600x400?text=Startup+Details+Page" alt="Startup Details Screenshot" width="400"/>
-      </td>
-    </tr>
-    <tr>
-      <td align="center">
-        <strong>Custom Login</strong><br/>
-        <img src="https://placehold.co/600x400?text=Login+Page" alt="Login Page Screenshot" width="400"/>
-      </td>
-      <td align="center">
-        <strong>User Profile</strong><br/>
-        <img src="https://placehold.co/600x400?text=User+Profile" alt="User Profile Screenshot" width="400"/>
-      </td>
-    </tr>
-  </table>
-</div>
-
-> **Note:** The placeholders above should be replaced with actual screenshots of your application. Take screenshots showing the key features and UI of your application and replace the placeholder URLs.
 
 ## 🔧 Getting Started
 
@@ -458,71 +343,12 @@ Creating a resilient application required comprehensive error handling:
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
-## 🌟 Credits and Acknowledgments
-
-<div align="center">
-  <table>
-    <tr>
-      <td align="center">
-        <a href="https://nextjs.org">
-          <img src="https://skillicons.dev/icons?i=nextjs" width="40" height="40" alt="Next.js" />
-          <br />
-          <sub><b>Next.js</b></sub>
-        </a>
-      </td>
-      <td align="center">
-        <a href="https://www.sanity.io">
-          <img src="https://skillicons.dev/icons?i=sanity" width="40" height="40" alt="Sanity" />
-          <br />
-          <sub><b>Sanity.io</b></sub>
-        </a>
-      </td>
-      <td align="center">
-        <a href="https://ui.shadcn.com/">
-          <img src="https://ui.shadcn.com/favicon.ico" width="40" height="40" alt="shadcn/ui" />
-          <br />
-          <sub><b>shadcn/ui</b></sub>
-        </a>
-      </td>
-      <td align="center">
-        <a href="https://tailwindcss.com/">
-          <img src="https://skillicons.dev/icons?i=tailwind" width="40" height="40" alt="Tailwind" />
-          <br />
-          <sub><b>Tailwind CSS</b></sub>
-        </a>
-      </td>
-      <td align="center">
-        <a href="https://next-auth.js.org/">
-          <img src="https://next-auth.js.org/img/favicon.ico" width="40" height="40" alt="NextAuth.js" />
-          <br />
-          <sub><b>NextAuth.js</b></sub>
-        </a>
-      </td>
-      <td align="center">
-        <a href="https://sentry.io/">
-          <img src="https://sentry.io/_assets/logos/favicon-74a89ae9df628b11a2d4b95ed665c34e.ico" width="40" height="40" alt="Sentry" />
-          <br />
-          <sub><b>Sentry</b></sub>
-        </a>
-      </td>
-      <td align="center">
-        <a href="https://vercel.com/">
-          <img src="https://skillicons.dev/icons?i=vercel" width="40" height="40" alt="Vercel" />
-          <br />
-          <sub><b>Vercel</b></sub>
-        </a>
-      </td>
-    </tr>
-  </table>
-</div>
-
 <hr />
 
 <div align="center">
-  <p>Created with ❤️ by Your Name</p>
+  <p>Created with ❤️ by Sujal</p>
   <p>
-    <a href="https://github.com/yourgithub">GitHub</a> •
-    <a href="https://twitter.com/yourtwitter">Twitter</a> •
-    <a href="https://linkedin.com/in/yourlinkedin">LinkedIn</a>
+    <a href="https://github.com/sujal-pawar">GitHub</a>
+    <a href="https://www.linkedin.com/in/sujal-pawar/">LinkedIn</a>
   </p>
 </div>
